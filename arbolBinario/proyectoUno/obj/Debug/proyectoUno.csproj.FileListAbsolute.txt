@@ -1,0 +1,6 @@
+C:\Users\Primo\OneDrive\Documentos\SharpDevelop Projects\arbolBinario\proyectoUno\bin\Debug\proyectoUno.exe.config
+C:\Users\Primo\OneDrive\Documentos\SharpDevelop Projects\arbolBinario\proyectoUno\bin\Debug\proyectoUno.exe
+C:\Users\Primo\OneDrive\Documentos\SharpDevelop Projects\arbolBinario\proyectoUno\bin\Debug\proyectoUno.pdb
+C:\Users\Primo\OneDrive\Documentos\SharpDevelop Projects\arbolBinario\proyectoUno\obj\Debug\proyectoUno.csprojResolveAssemblyReference.cache
+C:\Users\Primo\OneDrive\Documentos\SharpDevelop Projects\arbolBinario\proyectoUno\obj\Debug\proyectoUno.exe
+C:\Users\Primo\OneDrive\Documentos\SharpDevelop Projects\arbolBinario\proyectoUno\obj\Debug\proyectoUno.pdb

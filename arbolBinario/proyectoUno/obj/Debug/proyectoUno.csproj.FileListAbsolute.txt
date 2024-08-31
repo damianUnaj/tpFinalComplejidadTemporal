@@ -4,3 +4,9 @@ C:\Users\Primo\OneDrive\Documentos\SharpDevelop Projects\arbolBinario\proyectoUn
 C:\Users\Primo\OneDrive\Documentos\SharpDevelop Projects\arbolBinario\proyectoUno\obj\Debug\proyectoUno.csprojResolveAssemblyReference.cache
 C:\Users\Primo\OneDrive\Documentos\SharpDevelop Projects\arbolBinario\proyectoUno\obj\Debug\proyectoUno.exe
 C:\Users\Primo\OneDrive\Documentos\SharpDevelop Projects\arbolBinario\proyectoUno\obj\Debug\proyectoUno.pdb
+C:\complejidadtemporal\arbolBinario\proyectoUno\bin\Debug\proyectoUno.exe.config
+C:\complejidadtemporal\arbolBinario\proyectoUno\bin\Debug\proyectoUno.exe
+C:\complejidadtemporal\arbolBinario\proyectoUno\bin\Debug\proyectoUno.pdb
+C:\complejidadtemporal\arbolBinario\proyectoUno\obj\Debug\proyectoUno.csprojResolveAssemblyReference.cache
+C:\complejidadtemporal\arbolBinario\proyectoUno\obj\Debug\proyectoUno.exe
+C:\complejidadtemporal\arbolBinario\proyectoUno\obj\Debug\proyectoUno.pdb

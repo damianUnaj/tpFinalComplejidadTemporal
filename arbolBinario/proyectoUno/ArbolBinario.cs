@@ -18,15 +18,26 @@ namespace proyectoUno
 		private T dato;
 		private ArbolBinario<T>hijoIzquierdo;
 		private ArbolBinario<T>hijoDerecho;
-		
+		public int retardo; //nuevo atributo
+		//modifico el constructor para incluir el retardo
 		public ArbolBinario(T dato)
 		{
 			this.dato=dato;
+			this.retardo=0;
+		}
+		//modifico el constructor para agegar el retardo al construir el arbol
+		public ArbolBinario(T dato, int retardo=0)
+		{
+			this.dato=dato;
+			this.retardo=retardo;
 		}
 		public T getDatoRaiz()
 		{
 			return this.dato;
 		}
+		public void setDatoRaiz(T nuevoDato)
+		{this.dato=nuevoDato;}
+		
 		public ArbolBinario<T> getHijoIzquierdo()
 		{
 			return this.hijoIzquierdo;
@@ -34,6 +45,10 @@ namespace proyectoUno
 		public ArbolBinario<T> getHijoDerecho()
 		{
 			return this.hijoDerecho;
+		}
+		public void setRetardo(int retardo)
+		{
+			this.retardo=retardo;
 		}
 		public void agregarHijoIzquierdo(ArbolBinario<T> hijo)
 		{
@@ -70,6 +85,17 @@ namespace proyectoUno
 			Console.WriteLine(this.dato + "");
 			if(hijoDerecho!=null)
 				hijoDerecho.inorden();
+		}
+		public bool incluye(T elemento)
+		{
+			if (this.dato.ToString()==elemento.ToString())
+			{return true;}
+			if(hijoIzquierdo!=null && hijoIzquierdo.incluye(elemento))
+			{return true;}
+			if(hijoDerecho!=null && hijoDerecho.incluye(elemento))
+			{return true;}
+			else
+				return false;
 		}
 		public void postorden() //hijo izq, hijo der, raiz
 		{
@@ -133,6 +159,27 @@ namespace proyectoUno
 			if(hijoDerecho!=null)
 				der=hijoDerecho.contarHojas();
 			return izq+der; //retorno la suma de los valores acumulados de las variables
+		}
+		public ArbolBinario<int> nuevo(ArbolBinario<int>arbol)
+		{
+			if(arbol==null)
+				return null;
+			//el nuevo arbol se va construyendo tomando la raiz de arbol
+			ArbolBinario<int> nuevoArbol=new ArbolBinario<int>(arbol.getDatoRaiz());
+			
+			if(arbol.getHijoIzquierdo()!=null)
+			{//agrego hijo izquierdo al nuevo arbol llamando recursivamente a los hijos izq de arbol
+				
+				nuevoArbol.agregarHijoIzquierdo(nuevo(arbol.getHijoIzquierdo()));
+				//ahora el hijo izquiero es el hijo izquierdo de arbol+el nodo padre
+				nuevoArbol.getHijoIzquierdo().setDatoRaiz(nuevoArbol.getHijoIzquierdo().getDatoRaiz()+arbol.getDatoRaiz());
+			}
+			//hijo derecho agrego hijos derecho al nuevo arbol llamando recursivamente enviando el hijo derecho de arbol como atributo
+			if(arbol.hijoDerecho!=null)
+			{
+				nuevoArbol.agregarHijoDerecho(nuevo(arbol.getHijoDerecho()));
+			}
+			return nuevoArbol; //obtengo el nuevo arbol
 		}
 		
 

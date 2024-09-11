@@ -20,6 +20,9 @@ namespace proyectoUno
 		private ArbolBinario<T>hijoDerecho;
 		public int retardo; //nuevo atributo
 		//modifico el constructor para incluir el retardo
+		public ArbolBinario()
+		{
+		}
 		public ArbolBinario(T dato)
 		{
 			this.dato=dato;
@@ -31,6 +34,7 @@ namespace proyectoUno
 			this.dato=dato;
 			this.retardo=retardo;
 		}
+		
 		public T getDatoRaiz()
 		{
 			return this.dato;
@@ -54,10 +58,12 @@ namespace proyectoUno
 		{
 			hijoIzquierdo=hijo;
 		}
+		
 		public void agregarHijoDerecho(ArbolBinario<T>hijo)
 		{
 			this.hijoDerecho=hijo;
 		}
+		
 		public void eliminarHijoDerecho()
 		{
 			this.hijoDerecho=null;
@@ -180,6 +186,26 @@ namespace proyectoUno
 				nuevoArbol.agregarHijoDerecho(nuevo(arbol.getHijoDerecho()));
 			}
 			return nuevoArbol; //obtengo el nuevo arbol
+		}
+		public ArbolBinario<int> convertirHeapArbol(Heap heap,int indice)
+		{
+			if(indice>=heap.GetNumeroDeElementos())
+			{
+				return null;
+			}
+			try{
+			//crear nodo Actual
+			ArbolBinario<int> nuevoNodo=new ArbolBinario<int>(heap.GetElemento(indice));
+			//recursivamente construir el hijo izquierdo y derecho
+			nuevoNodo.hijoIzquierdo=convertirHeapArbol(heap,2*indice+1);
+			nuevoNodo.hijoDerecho=convertirHeapArbol(heap,2*indice+2);
+			return nuevoNodo;
+			}
+			catch(IndexOutOfRangeException ex)
+			{
+				Console.WriteLine("error: "+ ex.Message);
+				return null;
+			}
 		}
 		
 

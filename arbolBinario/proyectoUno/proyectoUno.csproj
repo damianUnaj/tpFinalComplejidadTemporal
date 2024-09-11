@@ -49,7 +49,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArbolBinario.cs" />
+    <Compile Include="ArbolGeneral.cs" />
     <Compile Include="Cola.cs" />
+    <Compile Include="Heap.cs" />
+    <Compile Include="ProfundidadDeArbolBinario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RedBinariaLlena.cs" />

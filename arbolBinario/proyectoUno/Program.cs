@@ -6,7 +6,7 @@
  * 
  * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
  */
-using System;
+using System;using tp2;
 
 namespace proyectoUno
 {
@@ -46,11 +46,26 @@ namespace proyectoUno
 			int mayorRetardo=red.retardoReenvio();					//el mayor retardo
 			Console.WriteLine("el mayor retardo del arbol es: {0}",mayorRetardo);
 			ArbolBinario<int> arbolbinarioB=arbolBinarioA.nuevo(arbolBinarioA);
-			
 			arbolbinarioB.recorridoPorNiveles();
+			ProfundidadDeArbolBinario profundidadArbol=new ProfundidadDeArbolBinario(arbolBinarioA);//creo una instancia ProfundidadDeARbolBinario
+			int sumaProfundidad2=profundidadArbol.sumaElementosProfundidad(2); //llamo al metodo que suma los elementos de la profundidad solicitada(ejercicio 7)
+			Console.WriteLine("la profundidad del arbol es: {0}",sumaProfundidad2); //muestro por consola
+			
+			int[]vector={12, 15, 20, 16, 24, 23, 34, 18};
+			Heap nuevaHeap=new Heap(vector);
+			nuevaHeap.insertar(14);
+			nuevaHeap.insertar(10);
+			nuevaHeap.insertar(22);
+			int indiceInicial=0;// establezco el indice en 0 para que valla construyendo el arbol correctamente
+			ArbolBinario<int> arbolHeap=new ArbolBinario<int>();
+			arbolHeap=arbolHeap.convertirHeapArbol(nuevaHeap,indiceInicial);
+			arbolHeap.recorridoPorNiveles();
+			
+			
 			
 			Console.WriteLine("Press any key to continue . . . ");
 			Console.ReadKey(true);
 		}
+		
 	}
 }

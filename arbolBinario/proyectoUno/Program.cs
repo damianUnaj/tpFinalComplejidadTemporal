@@ -60,6 +60,7 @@ namespace proyectoUno
 			ArbolBinario<int> arbolHeap=new ArbolBinario<int>();
 			arbolHeap=arbolHeap.convertirHeapArbol(nuevaHeap,indiceInicial);
 			arbolHeap.recorridoPorNiveles();
+			//prueba git
 			
 			
 			

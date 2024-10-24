@@ -1,0 +1,6 @@
+C:\Users\Primo\OneDrive\Documentos\SharpDevelop Projects\estrategia\estrategia\obj\Debug\estrategia.csprojResolveAssemblyReference.cache
+C:\Users\Primo\OneDrive\Documentos\SharpDevelop Projects\estrategia\estrategia\bin\Debug\estrategia.exe.config
+C:\Users\Primo\OneDrive\Documentos\SharpDevelop Projects\estrategia\estrategia\bin\Debug\estrategia.exe
+C:\Users\Primo\OneDrive\Documentos\SharpDevelop Projects\estrategia\estrategia\bin\Debug\estrategia.pdb
+C:\Users\Primo\OneDrive\Documentos\SharpDevelop Projects\estrategia\estrategia\obj\Debug\estrategia.exe
+C:\Users\Primo\OneDrive\Documentos\SharpDevelop Projects\estrategia\estrategia\obj\Debug\estrategia.pdb
